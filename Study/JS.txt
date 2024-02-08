@@ -1,0 +1,19 @@
+1>If a variable is declared using the let or const keywords within a block (**like inside a loop or an if statement**), it has block scope and is accessible only within that block.
+
+2>Variables declared with var keyword have function scope, meaning they are accessible within the function they are declared in, regardless of block scopes.
+
+3>Everything happens in javascript inside an '***execution context***'
+
+ 
+ Variable       Thread of Execution
+ Environment
+  
+  Memory             Code
+
+ Key:value         Whole code is executed one line at  time
+ a:10
+fn{..}
+
+4>Javascript is a synchronous:one command  in specific order Single-threaded:One command at a time  language
+
+5>Call stack :	interpreter

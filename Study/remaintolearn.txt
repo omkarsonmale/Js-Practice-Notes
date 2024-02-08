@@ -1,0 +1,2 @@
+1>callstack make notes proper working of js like methodes,code blocks
+2>garbage collection

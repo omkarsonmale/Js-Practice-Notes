@@ -1,0 +1,45 @@
+----------->
+Example of code:
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+function welcome() {
+  greet("Alice");
+}
+
+function start() {
+  welcome();
+}
+
+start();
+
+When start() is called, it triggers welcome(), which then triggers greet(). These functions are stacked on top of each other in the call stack. When greet() finishes, it's removed from the stack, then welcome(), and finally start().
+--------->
+IMP stpes in call stack
+
+1->The global execution context created inside browser with name call stack 
+
+2-> So whne line comes to *getname()* Brand new execution context is created and push it into call stack
+
+Once all execution is done call stack is empty now
+----------->
+
+Absolutely! The call stack is like a "to-do" list for your JavaScript code. When your code runs, JavaScript keeps track of where it is in the execution using this stack.
+
+Imagine you're following a recipe:
+
+Doing One Thing at a Time: You start by following step 1, then move to step 2, and so on. This linear sequence is similar to how JavaScript executes your code.
+
+Keeping Track of Where You Are: Now, imagine you're on step 5, and it says "call another recipe (function)." So, you put your current recipe aside, grab the new one, and start following its steps.
+
+In JavaScript, this "putting aside" is like pushing a function onto the call stack.
+When you're done with that function, you throw that recipe away (pop it from the stack), and you go back to where you left off in the previous recipe.
+Stacking Up and Down: This process keeps happening – you're stacking recipes (functions) on top of each other as you call them. When a function finishes, you remove it from the top of the stack and continue with the previous one.
+
+This "stack" structure helps JavaScript keep track of the functions that are currently running and their context (where they are in execution). If a function calls another function, the call stack manages this chain, making sure that when one function completes, the program returns to where it left off in the previous one.
+
+However, if the stack gets too deep (too many recipes/functions waiting to be completed), it can cause a "stack overflow" error, much like having too many nested recipes without finishing any.
+
+---interpreter-->
+An interpreter in JavaScript is a component of the JavaScript engine responsible for executing your code line by line. It reads your JavaScript code, parses it, and translates it into machine-understandable instructions in real-time.

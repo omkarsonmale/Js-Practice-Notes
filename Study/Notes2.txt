@@ -1,0 +1,66 @@
+List
+.this keyword
+Callback function
+Event loop
+Arrow function
+Higher order functions
+Arrays 
+objects
+asyanc &await --> Imp for error handling try and catch
+closure
+Arrays and objects:- Arrays Destructuring
+                     Object Destructuring
+                     Rest Operator
+                     Spread Operator 
+
+Conditions in JavaScript 1>
+        ternary operator
+        if else
+        terbary Operatorusing && and ii 
+        Optional chaining
+
+Array methodes   2>                             **Both  1 and 2 imp for react
+   Map()
+   Filter()
+   reduce()
+   sort()
+
+-->Event Listeners
+On click
+onBlur
+onChange
+onFocus
+setTimeout() & setInterval()
+
+-->Asynchronous Events    **IMP For api calls
+ Callback
+ Callback Hell
+ promises
+ promises APIs
+
+General Concepts of ES6
+
+All concpest to cover Vanilla JavaScript
+
+-------------->
+Basic Syntax: Variables, data types, operators, loops, conditionals, functions.
+DOM Manipulation: Interacting with HTML elements, modifying content, styles, attributes.
+Events: Handling user interactions (clicks, keypresses, etc.), event listeners.
+AJAX: Asynchronous JavaScript and XML, making requests to servers without reloading the page.
+Promises and Async/Await: Dealing with asynchronous operations more effectively.
+Error Handling: Try/catch statements for managing errors in code.
+ES6+ Features: Arrow functions, template literals, destructuring, classes, modules, etc.
+Storage: Using local storage or session storage to store data on the client-side.
+JSON: Handling JavaScript Object Notation for data interchange.
+Regular Expressions: Pattern matching within strings.
+Scope and Closures: Understanding variable scope and closures in JavaScript.
+Prototypes and Inheritance: JavaScript's prototype-based inheritance system.
+Security: Understanding and preventing common security vulnerabilities.
+Performance: Optimizing JavaScript code for better performance.
+Functional Programming Concepts: Higher-order functions, map, filter, reduce.
+Testing: Basics of testing JavaScript code using tools like Jest or Mocha.
+ESLint and Code Quality: Maintaining code quality and adhering to best practices.
+Browser APIs: Accessing features provided by the browser (geolocation, localStorage, etc.).
+Canvas and SVG: Drawing graphics and animations in the browser.
+Webpack and Module Bundlers: Managing modules and dependencies in JavaScript projects.
+ 

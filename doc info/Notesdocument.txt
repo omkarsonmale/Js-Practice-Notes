@@ -1,0 +1,109 @@
+1>Closures:
+->Closure means function along with its scope.
+->closure in JavaScript is created when a function is defined inside another function (outer function), and the inner function has access to the 
+->variables of the outer function, even after the outer function has finished executing.
+Deeper Explanation:
+Scope Chain:
+
+->In JavaScript, each function has its own scope, which includes variables defined within that function.
+When a function is defined inside another function, it creates a nested scope, forming a "scope chain."
+Lexical Scoping:
+
+->JavaScript uses lexical scoping, meaning the scope of a variable is determined by its position within the source code.
+An inner function has access to variables of its outer function, and this access is determined by the location of the code in the source, not by where the function is called.
+Closure Formation:
+
+->When an inner function is defined inside an outer function, it "closes over" the variables of the outer function. This is what creates a closure.
+Even if the outer function has finished executing, the inner function retains access to the variables of the outer function.
+Accessing Variables:
+
+->The inner function can access its own variables, variables of the outer function, and global variables.
+If a variable is not found in the inner function's scope, it looks up the scope chain until it finds the variable or reaches the global scope.
+
+2>Callback :
+JavaScript runs code sequentially in top-down order. However, there are some cases that code runs (or must run) after something else happens 
+and also not sequentially. This is called asynchronous programming.
+
+Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed.
+It helps us develop asynchronous JavaScript code and keeps us safe from problems and errors.
+
+In JavaScript, the way to create a callback function is to pass it as a parameter to another function, 
+and then to call it back right after something has happened or some task is completed.
+
+**3>Event loop** :
+Call Stack: JavaScript code execution starts with the call stack. When you call a function, it gets added to the call stack. The call stack is a data structure that keeps track of the functions being executed. When a function finishes executing, it gets removed from the stack.
+
+Event Queue: JavaScript runtime environments like web browsers have an event queue. This queue holds events like user input, timer events, and AJAX callbacks.
+
+Event Loop: The event loop is a continuously running process that checks if the call stack is empty. If the call stack is empty, it looks at the event queue.
+
+Execution Order: When the call stack is empty, the event loop takes the first event from the event queue and pushes it onto the call stack. This event could be a user click, a network response, or a timer callback. The associated function then starts executing.
+
+Non-Blocking I/O: JavaScript is single-threaded, meaning it can only execute one piece of code at a time. However, by utilizing event loops and asynchronous functions (like Promises and async/await), JavaScript can perform non-blocking I/O operations. When an asynchronous operation is initiated, instead of waiting for it to finish, JavaScript continues executing the rest of the code. Once the asynchronous operation completes, its callback is placed in the event queue, and the event loop handles its execution.
+
+Callback Queue: For asynchronous operations, once the result is ready, a callback function is added to the callback queue.
+
+Execution Context: Each time a function is called, a new execution context is created and pushed onto the call stack. This context contains information about the function's scope, arguments, and local variables.
+
+In summary, the event loop is a crucial part of JavaScript's concurrency model, allowing it to handle asynchronous operations efficiently without blocking the main thread. It ensures that JavaScript remains responsive and can handle tasks like user interactions and network requests seamlessly.
+
+3>User
+Okay but when call stack is not empty means it busy then what will happens
+ChatGPT
+When the call stack is not empty, it means that JavaScript is currently executing code and processing function calls. In this scenario, the event loop doesn't immediately process events from the event queue.
+
+Instead, the event loop waits for the call stack to become empty before it can handle events from the event queue. This is because JavaScript is single-threaded, meaning it can only execute one piece of code at a time. So, if the call stack is busy, it cannot start executing another event from the event queue until it finishes the current execution.
+
+Here's what happens when the call stack is not empty:
+
+JavaScript continues executing the functions that are currently on the call stack.
+Any synchronous code, including function calls, loops, or blocking I/O operations, will be processed until the call stack becomes empty.
+Once the call stack becomes empty, the event loop checks the event queue for pending events.
+If there are events in the event queue, the event loop takes the first event and pushes its associated callback function onto the call stack for execution.
+The callback function starts executing, and the process repeats.
+So, while the call stack is busy, the event loop is essentially waiting for an opportunity to execute the next event from the event queue. 
+This mechanism ensures that JavaScript can handle asynchronous tasks without blocking the main thread or causing the application to become unresponsive .
+
+**Some examples of event loops *:
+onclick: This event occurs when a user clicks on an HTML element.
+<button onclick="myFunction()">Click me</button>
+<script>
+function myFunction() {
+  alert("Button clicked!");
+}
+</script>
+
+onsubmit: This event occurs when a form is submitted.
+<form onsubmit="submitForm()">
+  <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+<script>
+function submitForm() {
+  alert("Form submitted!");
+}
+</script>
+
+onmouseover: This event occurs when the mouse pointer moves over an HTML element.
+<div onmouseover="mouseOverFunction()">Hover over me</div>
+<script>
+function mouseOverFunction() {
+  alert("Mouse over event triggered!");
+}
+</script>
+
+onchange: This event occurs when the value of an input element is changed.
+<input type="text" id="myInput" onchange="changeFunction()">
+<script>
+function changeFunction() {
+  alert("Input value changed!");
+}
+</script>
+
+onkeydown: This event occurs when a key is pressed down.
+<input type="text" onkeydown="keyDownFunction()">
+<script>
+function keyDownFunction() {
+  alert("Key down event triggered!");
+}
+</script>

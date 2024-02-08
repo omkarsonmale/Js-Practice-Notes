@@ -1,0 +1,24 @@
+There are two different types of modes strict modes and non-strinct modes
+
+//Strict mode :-->
+/*
+In JavaScript, strict mode is a way to make your code more secure and avoid certain types of bugs. When you use strict mode,
+ JavaScript enforces stricter rules on how you write your code, catching common mistakes and preventing potentially problematic actions.
+For example, strict mode makes it necessary to declare variables before using them, which helps prevent accidental global variables.
+ It also disables features that are considered error-prone or confusing, like using this in a global context.*/
+
+//Non-strict mode-->
+/*Non-strict mode, on the other hand, is the default behavior in JavaScript where fewer restrictions are in place.
+ This means JavaScript is more forgiving in non-strict mode, allowing certain actions that strict mode would flag as errors. */
+ 
+//-->this in global space
+console.log(this);
+// value of this keyword in global scope would be globalObject-window ,global
+
+->So When you *use strict: * mode on top and then run the out put of this keyword in both scope will be undefined
+
+-->//in strict mode-(this substitution)****
+// Value of this keyword inside a function is *undefined* but if we don't use "use strict" mode then the value of this keyword 
+would be get changed to globalObject which shows like window and any other 
+
+//this inside DOM like in HTML (buttons and all)

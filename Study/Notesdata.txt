@@ -1,0 +1,82 @@
+1> Global space : Anything which is not inside the function this is called as Global space content.
+2>Local space: It is inside the function .So when we declare variable or value in side the function it is local variable.
+3>Lexical environment :Where that specific code is physically present inside the code.
+function a(){
+    var a
+    function b(){
+
+    }
+}
+function b() **lexically involeved** inside function a() & a is involeved inside the global scope
+
+4>So the function is declared 
+a()
+so compiler first go to a()->inside its to b()-> run b()-> if there relation like var value inside b 
+is present a then go to a and then move forward
+
+5> So steps are Scope ->Scope chain () ->lexical environment 
+
+-->6> var-let-const : Memory which attached to var variable or value is attached to the Global object
+ But for let and const they are allocated Memory but they are stored in different memory space than 
+ global ->you cannot acces this memory space bfpre you have put some declaration value in them
+
+ -->7>Temporal dead zone :Science when there was let variable hosted & till it is initialized some value 
+    Sure thing! The temporal dead zone in JavaScript refers to a phase when a variable is declared with let or const but isn't yet accessible
+    or usable until the line where it's declared is reached during program execution.
+    console.log(a)-> a was hoisted  it Gives error
+    var a=10;-->initialized value
+    Console.log(a); Now it will print value
+    --In this example, the console.log(myVar) before the let myVar = 10; line throws an error because myVar is in the temporal dead zone—JavaScript knows it exists, 
+    but it hasn't been initialized yet. Only after the let myVar = 10; line is encountered can you use myVar without any issues.--
+
+ -->8> hoisting :Absolutely! In JavaScript, there's a concept called "hoisting" that brings variable declarations (not their assignments) 
+to the top of their scope during the compile phase.
+
+ -->9>Duplicates the variable which declared by let we cant use it or re assign it new value.But for var it it possible.
+    let x=10;
+    let x=100; Uncaugh syntax erro :already declared 
+    but for Var 
+    Var=20;
+    Var=30; it will change and print
+
+-->10> Refrence error: syntax erro 
+                       Type Error:Assignment to constant variable
+                       Refrence error :A "ReferenceError" in JavaScript occurs when you try to use a variable that hasn't been declared or is out of scope.
+                       It signifies that the JavaScript engine couldn't find a reference to the variable you're trying to use.
+
+-->11>Diff between Let,Const,Var :-> Mostly prefred "Const" .Then 2nf " Let " Beacuse it hava temporal dead zone.
+                                    Day to day coding try to keep var aside.   
+
+-->12>Block scope ----
+      Shadowing-->  Shadowing in JavaScript occurs when a variable declared in an inner scope has the same name as a variable in an outer scope.
+       This results in the inner variable "shadowing" or hiding the outer variable within its scope.
+
+      illegal shadowing-->Now, "illegal shadowing" refers to a situation where a variable is redeclared in the same scope. 
+      This isn't allowed in JavaScript using the same type of declaration (e.g., using let or const to declare a variable 
+      with the same name within the same scope).     
+      let a=20;
+      {
+         var a=30;
+      }        
+
+      lexical Block scope-->     
+      const b=20;
+      {
+        const b=30;
+         {
+            const b=60;
+            console.log(b);
+         }
+      }
+-->13>Closure:->Closure means function along with its scope
+  closure in JavaScript is a concept where a function can remember and 
+  access its lexical scope even when the function is executed outside that scope.
+
+-->14>SetTimeout :setTimeout is a function in JavaScript that allows you to execute a specific function or code snippet after a 
+specified delay (in milliseconds).
+
+setTimeout(function print(){
+   console.log("hii");
+},100);
+
+-->15>Callstack Browser where akshy saine notes
